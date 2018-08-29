@@ -3,6 +3,9 @@
 	// Configure glob patterns for excluding files and folders.
 	"files.exclude": {
 		"**/*.js": {"when": "$(basename).ts"},
-		"**/*.map": {"when": "$(basename)"}
+		"**/*.map": {"when": "$(basename)"},
+		"**/.git": true,
+		"**/.gitattributes": true,
+		"**/.gitignore": true,
 	}
 }

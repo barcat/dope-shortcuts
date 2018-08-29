@@ -1,10 +1,8 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
+    <!-- <h1>{{ msg }}</h1> -->
+    <div>test</div>
+    <div>test</div>
   </div>
 </template>
 
