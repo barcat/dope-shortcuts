@@ -3,6 +3,38 @@
 	// Configure glob patterns for excluding files and folders.
 	"files.exclude": {
 		"**/*.js": {"when": "$(basename).ts"},
-		"**/*.map": {"when": "$(basename)"}
-	}
+		"**/*.map": {"when": "$(basename)"},
+		"**/.git": true,
+		"**/.gitattributes": true,
+		"**/.gitignore": true,
+	},
+	"cSpell.language": "en",
+	"cSpell.enabledLanguageIds": [
+		"c",
+		"cpp",
+		"csharp",
+		"css",
+		"go",
+		"handlebars",
+		"html",
+		"jade",
+		"javascript",
+		"javascriptreact",
+		"json",
+		"latex",
+		"less",
+		"markdown",
+		"php",
+		"plaintext",
+		"pub",
+		"python",
+		"restructuredtext",
+		"rust",
+		"scss",
+		"text",
+		"typescript",
+		"typescriptreact",
+		"vue",
+		"yml"
+	]
 }
