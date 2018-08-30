@@ -10,7 +10,12 @@ else {
     url = `file://${process.cwd()}/dist/index.html`;
 }
 electron_1.app.on('ready', () => {
-    window = new electron_1.BrowserWindow({ width: 800, height: 600 });
+    window = new electron_1.BrowserWindow({
+        width: 800,
+        height: 600,
+        resizable: false,
+        frame: false,
+    });
     window.loadURL(url);
 });
 //# sourceMappingURL=main.js.map
