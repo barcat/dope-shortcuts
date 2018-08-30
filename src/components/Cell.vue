@@ -24,8 +24,6 @@ export default class Cell extends Vue {
 
 <style scoped>
 
-.cell {
-}
 h2{
   font-weight: bold;
   text-align: left;

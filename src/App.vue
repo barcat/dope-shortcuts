@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="container">
-    <cell shortcut="ctr + b" shortcut-description="some text..."></cell>
+    <cell v-for="(item, key) of shortcuts" :key="key" :shortcut="item.shortcut" :shortcut-description="item.shortcutDescription"></cell>
   </div>
 </template>
 
@@ -13,7 +13,12 @@ import Cell from './components/Cell.vue';
     Cell,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  private shortcuts: object[] = [
+    {id: 1, shortcut: 'ctr + b', shortcutDescription: 'some text ...'},
+    {id: 2, shortcut: 'ctr + a', shortcutDescription: 'some text ...'},
+  ];
+}
 </script>
 
 <style>
