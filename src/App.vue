@@ -1,12 +1,14 @@
 <template>
   <div id="app" class="container">
     <cell v-for="(item, key) of shortcuts" :key="key" :shortcut="item.shortcut" :shortcut-description="item.shortcutDescription"></cell>
+    <button class="fab" v-on:click="onAddButtonClick" >Add</button>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import Cell from './components/Cell.vue';
+import { Shortcut } from './model/Shortcut';
 
 @Component({
   components: {
@@ -14,10 +16,13 @@ import Cell from './components/Cell.vue';
   },
 })
 export default class App extends Vue {
-  private shortcuts: object[] = [
+  private shortcuts: Shortcut[] = [
     {id: 1, shortcut: 'ctr + b', shortcutDescription: 'some text ...'},
     {id: 2, shortcut: 'ctr + a', shortcutDescription: 'some text ...'},
   ];
+  private onAddButtonClick() {
+    this.shortcuts.push({id: 3, shortcut: 'shift + a', shortcutDescription: 'opis'});
+  }
 }
 </script>
 
@@ -58,6 +63,14 @@ time, mark, audio, video {
   width: 800px;
   display: grid;
   grid-template-columns: 400px 400px;
+}
+
+.fab {
+  position: fixed;
+  width: 56px;
+  left: 50%;
+  bottom: 15px;
+  margin-left: -28px;
 }
 
 </style>
