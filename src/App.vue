@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="container">
     <cell v-for="(item, key) of shortcuts" :key="key" :shortcut="item.shortcut" :shortcut-description="item.shortcutDescription"></cell>
-    <button class="fab" v-on:click="onAddButtonClick" >Add</button>
+    <a class="btn-floating btn-large waves-effect waves-light green fab" v-on:click="onAddButtonClick"><i class="material-icons">+</i></a>
   </div>
 </template>
 
@@ -68,8 +68,8 @@ time, mark, audio, video {
 .fab {
   position: fixed;
   width: 56px;
-  left: 50%;
-  bottom: 15px;
+  left: 95%;
+  bottom: 20px;
   margin-left: -28px;
 }
 

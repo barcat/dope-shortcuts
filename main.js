@@ -14,7 +14,7 @@ electron_1.app.on('ready', () => {
         width: 800,
         height: 600,
         resizable: false,
-        frame: false,
+        frame: true,
     });
     window.loadURL(url);
 });
